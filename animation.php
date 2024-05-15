@@ -75,7 +75,6 @@
                 $req->closeCursor();
             ?>
             </div>
-            <div class="test"></div>
         </div>
 
 <script>
