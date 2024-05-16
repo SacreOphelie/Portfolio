@@ -8,10 +8,10 @@
         {
            $choice = htmlspecialchars($_GET['categorie']);
         }else{
-            $choice = "all";
+            header("LOCATION:403.php");
         }
     }else{
-        $choice = "all";
+        header("LOCATION:403.php");
     }
 ?>
 
@@ -58,7 +58,7 @@
                 <div class="btnback"><a href="index.php#works">Back</a></div>
             </div>
             <div class="titre">
-                <h1>Animation</h1>
+                <h1>Illustrator</h1>
                 <hr>
             </div>
         </div>

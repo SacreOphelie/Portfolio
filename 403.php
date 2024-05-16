@@ -13,6 +13,8 @@
     <title>error 403</title>
 </head>
 <body>
-    <h1>Vous n'avez accès à cette partie du site</h1>
+    <div class="error403">
+        <h1>Vous n'avez accès à cette partie du site</h1>
+    </div>
 </body>
 </html>

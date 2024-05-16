@@ -13,7 +13,9 @@
     <title>error 404</title>
 </head>
 <body>
-    <h1>Ce que vous cherchez n'existe pas (ou plus)</h1>
-    <a href="index.php" class="btn btn-secondary">Retour</a>
+    <div class="error404">
+        <h1>Ce que vous cherchez n'existe pas (ou plus)</h1>
+        <a href="index.php" class="btn btn-secondary">Retour</a>
+    </div>
 </body>
 </html>
