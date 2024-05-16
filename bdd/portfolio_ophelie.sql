@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 16 mai 2024 à 07:05
+-- Généré le : jeu. 16 mai 2024 à 13:49
 -- Version du serveur : 8.0.31
--- Version de PHP : 8.0.26
+-- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,7 +54,7 @@ DROP TABLE IF EXISTS `animation`;
 CREATE TABLE IF NOT EXISTS `animation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `fichier` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `fichier` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `video` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` date NOT NULL,
@@ -66,8 +66,8 @@ CREATE TABLE IF NOT EXISTS `animation` (
 --
 
 INSERT INTO `animation` (`id`, `nom`, `fichier`, `video`, `description`, `date`) VALUES
-(10, 'Paralysis', '355975215Decor.jpg', 'https://youtu.be/Jqtw0y1HHGA', 'Une animation 2D pour ma 2 ème année en infographie', '2024-06-26'),
-(9, 'Un brin d\'espoir', '11730711211107480273plan-dy-cors.jpg', 'https://youtu.be/bn8oTVvfsfc', 'Dans le but de mon jury de fin d\'année de ma première année d\'infographie, j\'ai réalisé ce stop-motion avec une équipe composé de 4 personnes.', '2023-06-01');
+(10, 'Paralysis', '355975215Decor.jpg', 'https://www.youtube.com/embed/Jqtw0y1HHGA?si=nBvW1n3wSGeUq4JK', 'Une animation 2D pour ma 2 ème année en infographie', '2024-06-26'),
+(9, 'Un brin d&#039;espoir', '11730711211107480273plan-dy-cors.jpg', 'https://www.youtube.com/embed/bn8oTVvfsfc?si=k4UipbwSJhF96xXp', 'Dans le but de mon jury de fin d&#039;année de ma première année d&#039;infographie, j&#039;ai réalisé ce stop-motion avec une équipe composé de 4 personnes.', '2023-06-01');
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `contact`
@@ -97,7 +97,8 @@ INSERT INTO `contact` (`id`, `nom`, `prenom`, `email`, `message`, `date`) VALUES
 (4, 'Ophélie', 'ophélie', 'ophelie.sacre@outlook.fr', 'test 4', '2024-04-29 13:50:41'),
 (5, 'Sacré', 'Ophélie', 'ophelie.sacre@outlook.fr', 'Je t\'aime', '2024-04-29 17:14:41'),
 (6, 'Sacré', 'Ophélie', 'ophelie.sacre@outlook.fr', 'test 5', '2024-05-01 12:11:24'),
-(7, 'sacré', 'Sacré', 'ophelie.sacre@outlook.fr', 'test', '2024-05-01 12:15:25');
+(7, 'sacré', 'Sacré', 'ophelie.sacre@outlook.fr', 'test', '2024-05-01 12:15:25'),
+(8, 'test', 'test', 'test@test.fr', 'test', '2024-05-16 13:59:19');
 
 -- --------------------------------------------------------
 
@@ -121,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `illustration` (
 --
 
 INSERT INTO `illustration` (`id`, `nom`, `categorie`, `image`, `description`, `date`) VALUES
-(1, 'test', 'photo', '1103420699998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test', '2024-04-14'),
+(1, 'test', 'Photoshop', '1103420699998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test', '2024-04-14'),
 (6, 'Photoshop', 'Photoshop', '416266460morphing-1.jpg', 'test', '2024-05-16'),
 (7, 'Illustrator', 'Illustrator', '760128197Londres.jpg', 'test', '2024-05-16');
 
@@ -137,14 +138,14 @@ CREATE TABLE IF NOT EXISTS `images` (
   `fichier` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `id_illustration` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `images`
 --
 
 INSERT INTO `images` (`id`, `fichier`, `id_illustration`) VALUES
-(3, '82461383123998083chambre.png', 1);
+(4, '403127910image.jpg', 1);
 
 -- --------------------------------------------------------
 
