@@ -65,7 +65,8 @@
         <div class="contentworks2">
             <div class="contentworks">
             <?php
-                $req = $bdd->query("SELECT * FROM illustration ORDER BY id ASC");
+                $req = $bdd->prepare("SELECT * FROM illustration WHERE categorie=? ORDER BY id ASC");
+                $req->execute([$choice]);
                 while($don = $req->fetch())
                 {
                     echo "<div class='pc'>";
