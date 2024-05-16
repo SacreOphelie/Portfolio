@@ -110,7 +110,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="#">Illustrator</a></div>
+                    <div class="btnpc"><a href="illustration.php?categorie=Illustrator">Illustrator</a></div>
                 </div>
             </div>         
             <div class="pc">
@@ -120,7 +120,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="#">InDesign</a></div>
+                    <div class="btnpc"><a href="illustration.php?categorie=Indesign">InDesign</a></div>
                 </div>
             </div>         
             <div class="pc">
@@ -140,7 +140,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="#">WebSite</a></div>
+                    <div class="btnpc"><a href="web.php">WebSite</a></div>
                 </div>
             </div>         
             <div class="pc">

@@ -24,26 +24,26 @@
     <title>Illustration</title>
 </head>
 <body>
-<div class="contentmenutab">
-        <div id="menutab">
+    <div class="contentmenutab">
+            <div id="menutab">
+                <ul>
+                    <li><a href="index.php#home">Home</a></li>
+                    <li><a href="index.php#aboutme">About Me</a></li>
+                    <li><a href="index.php#skills">Skills</a></li>
+                    <li><a href="index.php#works">Works</a></li>
+                    <li><a href="index.php#contact" id="acontact">Contact</a></li>
+                </ul>
+            </div>
+    </div>
+    <div class="slide slideworks">
+        <nav>
+            <div id="logo"><img src="home/logo" alt="logo"></div>
             <ul>
                 <li><a href="index.php#home">Home</a></li>
                 <li><a href="index.php#aboutme">About Me</a></li>
                 <li><a href="index.php#skills">Skills</a></li>
                 <li><a href="index.php#works">Works</a></li>
                 <li><a href="index.php#contact" id="acontact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="slide" id="photoshop">
-        <nav>
-            <div id="logo"><img src="home/logo" alt="logo"></div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#contact" id="acontact">Contact</a></li>
             </ul>
             <div id="menuburger">
                 <div id="menu">
@@ -58,27 +58,37 @@
                 <div class="btnback"><a href="index.php#works">Back</a></div>
             </div>
             <div class="titre">
-                <?php
-                    echo "<h1>$choice</h1>";
-                ?>
+                <h1>Animation</h1>
                 <hr>
             </div>
         </div>
         <div class="contentworks2">
             <div class="contentworks">
-                <div class="pc">
-                    <div class="ecran">
-                        <div class="pcimg" id="pcimg6"></div>
-                    </div>
-                    <div class="support"></div>
-                    <div class="pied"></div>
-                    <div class="btnpc2">
-                        <div class="btnpc"><a href="#">Pictures</a></div>
-                    </div>
-                </div>
+            <?php
+                $req = $bdd->query("SELECT * FROM illustration ORDER BY id ASC");
+                while($don = $req->fetch())
+                {
+                    echo "<div class='pc'>";
+                        echo "<div class='ecran'>";
+                            echo "<div class='pcimg'>";
+                                echo "<img src='images/".$don['image']."' class='img' />";
+                            echo "</div>";
+                        echo "</div>";
+                        echo "<div class='support'>";
+                        echo "</div>";
+                        echo "<div class='pied'>";
+                        echo "</div>";
+                        echo "<div class='btnpc2'>";
+                        echo "<div class='btnpc'>";
+                        echo "<a href='showanim.php?id=".$don['id']."' class='btn btn-primary'>".$don['nom']."</a>";
+                        echo "</div>";
+                        echo "</div>";    
+                    echo "</div>";
+                }
+                $req->closeCursor();
+            ?>
             </div>
         </div>
-
 <script>
 
     const menuburger = document.querySelector('#menuburger')
