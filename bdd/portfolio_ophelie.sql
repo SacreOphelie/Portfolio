@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 18 avr. 2024 à 11:24
+-- Généré le : jeu. 16 mai 2024 à 07:05
 -- Version du serveur : 8.0.31
--- Version de PHP : 8.2.0
+-- Version de PHP : 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,21 +54,20 @@ DROP TABLE IF EXISTS `animation`;
 CREATE TABLE IF NOT EXISTS `animation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `fichier` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `video` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `animation`
 --
 
-INSERT INTO `animation` (`id`, `nom`, `video`, `description`, `date`) VALUES
-(5, 'test', 'test.fr', 'test', '2024-04-17'),
-(2, 'test', 'test.fr', 'test', '2024-04-14'),
-(4, 'test.fr', '', 'test', '2024-04-12'),
-(6, 'test.fr', '', 'test', '2024-04-18');
+INSERT INTO `animation` (`id`, `nom`, `fichier`, `video`, `description`, `date`) VALUES
+(10, 'Paralysis', '355975215Decor.jpg', 'https://youtu.be/Jqtw0y1HHGA', 'Une animation 2D pour ma 2 ème année en infographie', '2024-06-26'),
+(9, 'Un brin d\'espoir', '11730711211107480273plan-dy-cors.jpg', 'https://youtu.be/bn8oTVvfsfc', 'Dans le but de mon jury de fin d\'année de ma première année d\'infographie, j\'ai réalisé ce stop-motion avec une équipe composé de 4 personnes.', '2023-06-01');
 
 -- --------------------------------------------------------
 
@@ -85,7 +84,20 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `contact`
+--
+
+INSERT INTO `contact` (`id`, `nom`, `prenom`, `email`, `message`, `date`) VALUES
+(1, 'sacré', 'ophélie', 'ophelie.sacre@outlook.fr', 'test', '2024-04-29 10:57:48'),
+(2, 'Ophélie', 'Sacré', 'ophelie.sacre@outlook.fr', 'test 2', '2024-04-29 13:23:53'),
+(3, 'sacré', 'ophélie', 'ophelie.sacre@outlook.fr', 'test3', '2024-04-29 13:28:06'),
+(4, 'Ophélie', 'ophélie', 'ophelie.sacre@outlook.fr', 'test 4', '2024-04-29 13:50:41'),
+(5, 'Sacré', 'Ophélie', 'ophelie.sacre@outlook.fr', 'Je t\'aime', '2024-04-29 17:14:41'),
+(6, 'Sacré', 'Ophélie', 'ophelie.sacre@outlook.fr', 'test 5', '2024-05-01 12:11:24'),
+(7, 'sacré', 'Sacré', 'ophelie.sacre@outlook.fr', 'test', '2024-05-01 12:15:25');
 
 -- --------------------------------------------------------
 
@@ -102,18 +114,16 @@ CREATE TABLE IF NOT EXISTS `illustration` (
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `illustration`
 --
 
 INSERT INTO `illustration` (`id`, `nom`, `categorie`, `image`, `description`, `date`) VALUES
-(1, 'test', 'categorie1', '1103420699998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test', '2024-04-14'),
-(2, 'photoshop update', 'categorie1', '1775730431998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test', '2024-04-17'),
-(3, 'test update', 'categorie3', '5961174411775730431998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test', '2024-04-17'),
-(4, 'test', 'categorie3', '1190194752676369904998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test', '2024-04-17'),
-(5, 'photo', 'photo', '1016937310123998083chambre.png', 'test', '2024-04-17');
+(1, 'test', 'photo', '1103420699998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test', '2024-04-14'),
+(6, 'Photoshop', 'Photoshop', '416266460morphing-1.jpg', 'test', '2024-05-16'),
+(7, 'Illustrator', 'Illustrator', '760128197Londres.jpg', 'test', '2024-05-16');
 
 -- --------------------------------------------------------
 
@@ -127,15 +137,14 @@ CREATE TABLE IF NOT EXISTS `images` (
   `fichier` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `id_illustration` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `images`
 --
 
 INSERT INTO `images` (`id`, `fichier`, `id_illustration`) VALUES
-(1, '14362092461932453032998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 2),
-(2, '19101793531775730431998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 3);
+(3, '82461383123998083chambre.png', 1);
 
 -- --------------------------------------------------------
 
@@ -148,14 +157,21 @@ CREATE TABLE IF NOT EXISTS `skills` (
   `id` int NOT NULL AUTO_INCREMENT,
   `svg` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `skills`
 --
 
 INSERT INTO `skills` (`id`, `svg`) VALUES
-(1, '1912954451123998083chambre.png');
+(3, '1286654628skills-an.png'),
+(2, '556658999982156034skills-ai.png'),
+(4, '554553850skills-au.png'),
+(5, '460441786skills-id.png'),
+(6, '1045754102skills-pr.png'),
+(7, '481690210skills-ps.png'),
+(8, '1093225007skills-vs.png'),
+(9, '262917415skills-f.png');
 
 -- --------------------------------------------------------
 
@@ -173,16 +189,15 @@ CREATE TABLE IF NOT EXISTS `web` (
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `web`
 --
 
 INSERT INTO `web` (`id`, `nom`, `photo`, `url`, `figma`, `description`, `date`) VALUES
-(1, 'test', '5961174411775730431998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test.fr', 'figma.fr', 'test', '2024-04-17'),
-(2, 'test', '1932453032998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test.fr', 'figma.fr', 'test', '2024-04-17'),
-(3, 'test 2', '170730082014761602355961174411775730431998437204415024638Alfa-Romeo-Tonale-Concept-01.jpg', 'test', 'tset2.fr', 'test', '2024-04-17');
+(4, 'Web', '10687662021401050764website.png', 'test.fr', 'test.fr', 'test', '2024-05-16'),
+(6, 'test', '1401050764website.png', 'test', 'test', 'test', '2024-05-16');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
