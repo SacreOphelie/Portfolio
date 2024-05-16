@@ -176,7 +176,7 @@
                 ?>
                 <div class="nom">
                     <input type="text" id="nom" name="nom" class="form-control" placeholder="Name">
-                    <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Forname">
+                    <input type="text" id="prenom" name="prenom" class="form-control" placeholder="First Name">
                 </div>
                 <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
                 <textarea name="message" id="message" class="form-control" placeholder="Message"></textarea>

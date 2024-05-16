@@ -34,8 +34,8 @@
             if(empty($_FILES['svg']['tmp_name']))
             {
                  // // modification dans la bdd
-                $update = $bdd->prepare("UPDATE skills SET nom=?, categorie=?, description=?, date=?, prix=? WHERE id=?");
-                $update->execute([$nom, $categorie, $description, $date, $prix, $id]);
+                $update = $bdd->prepare("UPDATE skills SET  WHERE id=?");
+                $update->execute([$id]);
                 $update->closeCursor();
                 header("LOCATION:skills.php?update=".$id);
             }else{
@@ -66,34 +66,34 @@
                     $fichier = preg_replace('/([^.a-z0-9]+)/i','-',$fichier); 
                     $fichiercptl = rand().$fichier; 
 
-                    if(move_uploaded_file($_FILES['fichier']['tmp_name'], $dossier.$fichiercptl))
+                    if(move_uploaded_file($_FILES['svg']['tmp_name'], $dossier.$fichiercptl))
                     {
                         // supprimer l'ancien fichier si le nouveau est ok 
-                        unlink("../images/".$don['fichier']);
+                        unlink("../images/".$don['svg']);
 
                         // modification (update) dans la base de données
 
-                        $update = $bdd->prepare("UPDATE products SET nom=?, categorie=?, description=?, date=?, prix=?, fichier=? WHERE id=?");
-                        $update->execute([$nom, $categorie, $description, $date, $prix,$fichiercptl,$id]);
+                        $update = $bdd->prepare("UPDATE skills SET fichier=? WHERE id=?");
+                        $update->execute([$fichiercptl,$id]);
                         $update->closeCursor();
-                        header("LOCATION:products.php?update=".$id);
+                        header("LOCATION:skills.php?update=".$id);
                     }else{
-                        header("LOCATION:addProduct.php?errorimg=4");
+                        header("LOCATION:addSkills.php?errorimg=4");
                     }
 
                 }else{
-                    header("LOCATION:updateProduct.php?id=".$id."&errorimg=".$error);
+                    header("LOCATION:updateSkills.php?id=".$id."&errorimg=".$error);
                 }     
             }
         }else{
             // redirection vers le formulaire en indiquant l'erreur
-            header("LOCATION:updateProduct.php?id=".$id."&error=".$error);
+            header("LOCATION:updateSkills.php?id=".$id."&error=".$error);
         }
 
 
     }else{
-        // redirection vers products.php car il n'y a pas de formulaire envoyé
-        header("LOCATION:products.php");
+        // redirection vers skills.php car il n'y a pas de formulaire envoyé
+        header("LOCATION:skills.php");
     }
 
 
