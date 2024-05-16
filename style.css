@@ -895,6 +895,25 @@ footer{
     font-weight: 300;
     margin-top: 20px;
 }
+
+.url{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.url div{
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.url div a{
+    text-decoration: none;
+    color: white;
+}
+
+
 .video{
     color: white;
     font-size: 20px;
@@ -913,6 +932,8 @@ footer{
 .contentshow3 .btnback2{
     margin-left: 0;
 }
+
+
 
                             /* *** Responsive *** */
 
@@ -1438,6 +1459,12 @@ footer{
     }
     .video{
         font-size: 16px;
+    }
+    .url{
+        font-size: 16px;
+    }  
+    .url div{
+        font-size: 14px;
     }
 
 }

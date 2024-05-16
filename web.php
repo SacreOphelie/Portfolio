@@ -67,7 +67,7 @@
                         echo "</div>";
                         echo "<div class='btnpc2'>";
                         echo "<div class='btnpc'>";
-                        echo "<a href='showanim.php?id=".$don['id']."' class='btn btn-primary'>".$don['nom']."</a>";
+                        echo "<a href='showweb.php?id=".$don['id']."' class='btn btn-primary'>".$don['nom']."</a>";
                         echo "</div>";
                         echo "</div>";    
                     echo "</div>";
