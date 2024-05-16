@@ -26,6 +26,7 @@
         header("LOCATION:web.php");
     }
     $req->closeCursor();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -51,7 +51,6 @@
         include("partials/header.php");
     ?>
     <div class="container">
-        <h2>Modifier: <?= $don['nom'] ?></h2>
         <a href="skills.php" class='btn btn-secondary'>Retour</a>
         <?php
             if(isset($_GET['error']))
