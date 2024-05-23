@@ -86,7 +86,6 @@
                         echo "<td>".$don['id']."</td>";
                         echo "<td>".$don['svg']."</td>";
                         echo "<td>";
-                            echo "<a href='updateSkills.php?id=".$don['id']."' class='btn btn-warning'>Modifier</a>";
                             echo "<a href='skills.php?delete=".$don['id']."' class='btn btn-danger'>Supprimer</a>";
                         echo "</td>";
                     echo "</tr>";
