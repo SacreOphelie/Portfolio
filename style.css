@@ -709,18 +709,19 @@ footer{
 .footerinfo{
     /* background-color: #DFCDDC; */
     width: 600px;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .footera{
     display: flex;
     justify-content: space-around;
     /* background-color: #7D67A9; */
-    height: 50%;
     align-items: center;
+    height: 60px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.438);
 }
 
 .footerinfo div a{
@@ -729,12 +730,24 @@ footer{
     font-size: 20px;
 }
 
+#mentions{
+    /* background-color: #2A2558; */
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    height: 60px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.459);
+    width: 100%;
+    text-align: center;
+}
+
 #signature{
     display: flex;
     justify-content: center;
     width: 100%;
     color: white;
     font-size: 20px;
+    /* background-color: #7D67A9; */
 }
 
                             /* **** Works **** */
