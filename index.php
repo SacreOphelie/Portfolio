@@ -11,35 +11,10 @@
     <title>Portfolio_OphélieSacré</title>
 </head>
 <body>
-    <div class="contentmenutab">
-        <div id="menutab">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#contact" id="acontact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+    <?php
+        include("headfoot/header.php");
+    ?>
     <div class="slide" id="home">
-        <nav>
-            <div id="logo"><img src="home/logo" alt="logo"></div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#works">Works</a></li>
-                <li><a href="#contact" id="acontact">Contact</a></li>
-            </ul>
-            <div id="menuburger">
-                <div id="menu">
-                    <div class="ligne" id="l1"></div>
-                    <div class="ligne" id="l2"></div>
-                    <div class="ligne" id="l3"></div>
-                </div>
-            </div>
-        </nav>
         <div class="arrow">
             <div class="arrowl" id="arrow1"></div>
             <div class="arrowl" id="arrow2"></div>
@@ -188,25 +163,7 @@
         </div>
 
     </div>
-    <footer>
-        <div class="social">
-            <p>Social Media</p>
-            <div class="media">
-                <a href="https://github.com/SacreOphelie"><img src="home/github.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/oph%C3%A9lie-sacr%C3%A9-115b98292/"><img src="home/linkedin.png" alt=""></a>
-            </div>
-        </div>
-        <div class="footerinfo">
-            <div class="footera">
-                <a href="#aboutme">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#works">Works</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div id="signature">Porfolio • Ophélie Sacré</div>
-        </div>
-        <img src="home/plante.png" alt="" id="plante">
-    </footer>
+    <?php include('headfoot/footer.php'); ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 

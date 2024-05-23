@@ -13,8 +13,14 @@
     <title>error 403</title>
 </head>
 <body>
+<?php
+        include("headfoot/header.php");
+?>
     <div class="error403">
         <h1>Vous n'avez accès à cette partie du site</h1>
     </div>
+<?php
+    include("headfoot/footer.php");
+?>
 </body>
 </html>

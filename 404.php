@@ -12,9 +12,15 @@
     <title>error 404</title>
 </head>
 <body>
+<?php
+    include("headfoot/header.php");
+?>
     <div class="error404">
         <h1>Ce que vous cherchez n'existe pas (ou plus)</h1>
         <a href="index.php" class="btnpc">Retour</a>
     </div>
+    <?php
+        include("headfoot/footer.php");
+    ?>
 </body>
 </html>
