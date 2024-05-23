@@ -58,7 +58,7 @@
                 <div class="btnback"><a href="index.php#works">Back</a></div>
             </div>
             <div class="titre">
-                <h1>Illustrator</h1>
+                <h1><?= "$choice" ?></h1>
                 <hr>
             </div>
         </div>
@@ -81,7 +81,7 @@
                         echo "</div>";
                         echo "<div class='btnpc2'>";
                         echo "<div class='btnpc'>";
-                        echo "<a href='showanim.php?id=".$don['id']."' class='btn btn-primary'>".$don['nom']."</a>";
+                        echo "<a href='showillu.php?id=".$don['id']."' class='btn btn-primary'>".$don['nom']."</a>";
                         echo "</div>";
                         echo "</div>";    
                     echo "</div>";

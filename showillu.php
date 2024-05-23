@@ -10,7 +10,7 @@
 
     // vérifier que l'id existe bien dans ma bdd 
     require "connexion.php";
-    $req = $bdd->prepare("SELECT * FROM web WHERE id=?");
+    $req = $bdd->prepare("SELECT * FROM illustration WHERE id=?");
     $req->execute([$id]);
     $don = $req->fetch();
     $req->closeCursor();
@@ -63,16 +63,38 @@
             <div class="contentshow2">
                 <h1><?= $don['nom'] ?></h1>
                 <div class="contentshowimg">
-                    <img src="images/<?= $don['photo'] ?>" alt="image de <?= $don['nom'] ?>">
+                    <img src="images/<?= $don['image'] ?>" alt="image de <?= $don['nom'] ?>">
                 </div>
             </div>
             <div class="contentshow3">
                 <div class="date">Date : <div><?= $don['date'] ?></div></div>
                 <div class="description">Description : <div><?= nl2br($don['description']) ?></div></div>
-                <div class="url">Lien du site : <div><a href="<?= nl2br($don['url']) ?>"><?= nl2br($don['url']) ?></a></div></div>
-                <div class="url">Lien Figma : <div><a href="<?= nl2br($don['figma']) ?>"><?= nl2br($don['figma']) ?></a></div></div>
+                <div class="galerie">
+                    Galerie :
+                    <div class="contentgalerie">
+                        <?php 
+                            $gal = $bdd->prepare("SELECT * FROM images WHERE id_illustration=?");
+                            $gal->execute([$id]);
+                            // tester si j'ai des images ou non
+                            $count = $gal->rowCount();
+                            if($count > 0)
+                            {
+                                while($donGal = $gal->fetch())
+                                {
+                                    echo "<div class='imagegal'>";  
+                                        echo "<img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."' class=''>";
+                                    echo "</div>";
+                                }
+                            }else{
+                                echo "<p>Aucune images associées</p>";
+                            }
+                            $gal->closeCursor();
+
+                        ?>
+                    </div>
+                </div>
                 <div class="btnback2">
-                    <div class="btnback"><a href="animation.php">Back</a></div>
+                    <div class="btnback"><a href='illustration.php?categorie=?".$don['categorie']."'>Back</a></div>
                 </div>
             </div>
         </div>
