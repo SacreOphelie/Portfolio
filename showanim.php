@@ -71,7 +71,7 @@
                 <div class="description">Description : <div><?= nl2br($don['description']) ?></div></div>
                 <div class="video">Vidéo :<iframe width="1280" height="580" src="<?= $don['video'] ?>" title="<?= $don['nom'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="video"></iframe> </div>
                 <div class="btnback2">
-                    <div class="btnback"><a href="animation.php">Back</a></div>
+                    <a href="animation.php" class="btnback">Back</a>
                 </div>
             </div>
             

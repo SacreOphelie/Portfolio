@@ -59,10 +59,10 @@
                 <p>I'm motivated, organised, creative and adaptable.</p>
                 <div class="cvcontact">
                     <div id="cont2">
-                        <div id="contactme"><a href="#contact">Contact Me</a></div>
+                        <a href="#contact" id="contactme">Contact Me</a>
                     </div> 
                     <div id="cv2">
-                        <div id="cv"><a href="#">CV</a></div>
+                        <a href="#" id="cv">CV</a>
                     </div>
                 </div>
                                 
@@ -100,7 +100,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="illustration.php?categorie=Photoshop">Photoshop</a></div>
+                    <a href="illustration.php?categorie=Photoshop" class="btnpc">Photoshop</a>
                 </div>
             </div>         
             <div class="pc">
@@ -110,7 +110,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="illustration.php?categorie=Illustrator">Illustrator</a></div>
+                    <a href="illustration.php?categorie=Illustrator" class="btnpc">Illustrator</a>
                 </div>
             </div>         
             <div class="pc">
@@ -120,7 +120,8 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="illustration.php?categorie=Indesign">InDesign</a></div>
+                    <a href="illustration.php?categorie=Indesign" class="btnpc">InDesign</a>
+                    
                 </div>
             </div>         
             <div class="pc">
@@ -130,7 +131,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="animation.php">Animation</a></div>
+                    <a href="animation.php" class="btnpc">Animation</a>
                 </div>
             </div>         
             <div class="pc">
@@ -140,7 +141,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="web.php">WebSite</a></div>
+                    <a href="web.php" class="btnpc">WebSite</a>
                 </div>
             </div>         
             <div class="pc">
@@ -150,7 +151,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <div class="btnpc"><a href="#">Pictures</a></div>
+                    <a href="picture.php" class="btnpc">Pictures</a>
                 </div>
             </div>         
         </div>

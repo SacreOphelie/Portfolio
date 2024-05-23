@@ -72,7 +72,7 @@
                 <div class="url">Lien du site : <div><a href="<?= nl2br($don['url']) ?>"><?= nl2br($don['url']) ?></a></div></div>
                 <div class="url">Lien Figma : <div><a href="<?= nl2br($don['figma']) ?>"><?= nl2br($don['figma']) ?></a></div></div>
                 <div class="btnback2">
-                    <div class="btnback"><a href="animation.php">Back</a></div>
+                    <a href="animation.php" class="btnback">Back</a>
                 </div>
             </div>
         </div>

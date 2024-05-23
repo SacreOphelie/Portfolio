@@ -336,23 +336,22 @@ hr{
     justify-content: center;
     align-items: center;
     transition: all 1s;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
 }
 
 #contactme:hover{
     transform: translate(8px,-8px);
 }
 
-#contactme a{
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 25px;
-}
-
 #cont2{
     background-color: #ffd2f7;
     width: 200px;
     height: 50px;
+    text-decoration: none;
 }
 
 #cv{
@@ -363,14 +362,10 @@ hr{
     justify-content: center;
     align-items: center;
     transition: all 1s;
-}
-
-#cv a{
     font-weight: 600;
     font-size: 25px;
     text-decoration: none;
     color: white;
-
 }
 
 #cv2{
@@ -532,15 +527,12 @@ hr{
     justify-content: center;
     align-items: center;
     transition: all 1s;
-}
-
-.btnpc a{
     font-weight: 600;
     font-size: 25px;
     text-decoration: none;
     color: white;
-
 }
+
 
 .btnpc:hover{
     transform: translate(8px,-8px);
@@ -770,6 +762,12 @@ footer{
     background-color: #7D67A9;
     transition: all 1s;
     z-index: 1;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 1s;
+    z-index: 2;
 }
 .btnback2{
     width: 200px;
@@ -778,15 +776,6 @@ footer{
     z-index: 1;
     margin-left: 80px;
 
-}
-
-.btnback a{
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 1s;
-    z-index: 2;
 }
 
 .btnback:hover{

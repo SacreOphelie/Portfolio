@@ -55,7 +55,7 @@
         </nav>
         <div class="contenttitre">
             <div class="btnback2">
-                <div class="btnback"><a href="index.php#works">Back</a></div>
+                <a href="index.php#works" class="btnback">Back</a>
             </div>
             <div class="titre">
                 <h1><?= "$choice" ?></h1>
@@ -80,9 +80,7 @@
                         echo "<div class='pied'>";
                         echo "</div>";
                         echo "<div class='btnpc2'>";
-                        echo "<div class='btnpc'>";
-                        echo "<a href='showillu.php?id=".$don['id']."' class='btn btn-primary'>".$don['nom']."</a>";
-                        echo "</div>";
+                        echo "<a href='showillu.php?id=".$don['id']."' class='btnpc'>".$don['nom']."</a>";
                         echo "</div>";    
                     echo "</div>";
                 }
