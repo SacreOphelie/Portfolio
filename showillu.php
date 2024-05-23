@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="btnback2">
-                    <div class="btnback"><a href='illustration.php?categorie=?".$don['categorie']."'>Back</a></div>
+                    <div class="btnback"><a href='illustration.php?categorie=<?= $don['categorie'] ?>'>Back</a></div>
                 </div>
             </div>
         </div>
