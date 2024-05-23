@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 16 mai 2024 à 13:49
+-- Généré le : jeu. 23 mai 2024 à 07:25
 -- Version du serveur : 8.0.31
--- Version de PHP : 8.2.0
+-- Version de PHP : 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -138,14 +138,7 @@ CREATE TABLE IF NOT EXISTS `images` (
   `fichier` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `id_illustration` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `images`
---
-
-INSERT INTO `images` (`id`, `fichier`, `id_illustration`) VALUES
-(4, '403127910image.jpg', 1);
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
