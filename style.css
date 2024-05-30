@@ -1515,9 +1515,6 @@ footer{
 
 @media all and (max-width: 630px)
 {
-    nav{
-        width: 80%;
-    }
     #home{
         background-image: url(home/telephone.png);
     }
