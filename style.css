@@ -40,7 +40,6 @@ html,body{
     font-family: "Rajdhani", sans-serif;
     scroll-behavior: smooth;
     width: 100%;
-    overflow-x: hidden;
 }
 
 .slide{
@@ -1277,8 +1276,7 @@ footer{
     }
     .contentshow2{
         height: 50%;
-    }
-    
+    } 
 }
 
 @media all and (max-width: 1000px)
@@ -1510,6 +1508,9 @@ footer{
 
 @media all and (max-width: 630px)
 {
+    nav{
+        width: 80%;
+    }
     #home{
         background-image: url(home/telephone.png);
     }
