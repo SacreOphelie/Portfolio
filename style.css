@@ -39,6 +39,8 @@ html,body{
     height: 100%;
     font-family: "Rajdhani", sans-serif;
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .slide{
@@ -1220,10 +1222,8 @@ footer{
     #contactme{
         width: 150px;
         height: 50px;
-
-    }
-    #contactme a{
         font-size: 20px;
+
     }
     #texte p{
         font-size: 14px;
@@ -1236,11 +1236,7 @@ footer{
     #cv{
         width: 150px;
         height: 50px;
-    }
-    
-    #cv a{
         font-size: 20px;
-    
     }
     
     #cv2{
@@ -1378,12 +1374,8 @@ footer{
     .btnpc{
         width: 200px;
         height: 50px;
-
-    }
-    
-    .btnpc a{
         font-size: 20px;
-    
+
     }
     
     #contact h1{
@@ -1626,11 +1618,9 @@ footer{
     #contactme{
         width: 100px;
         height: 50px;
-    }
-
-    #contactme a{
         font-size: 16px;
     }
+
 
     #cont2{
         width: 100px;
@@ -1640,11 +1630,7 @@ footer{
     #cv{
         width: 100px;
         height: 50px;
-    }
-    
-    #cv a{
         font-size: 16px;
-    
     }
     
     #cv2{
@@ -1682,12 +1668,10 @@ footer{
     .btnpc{
         width: 200px;
         height: 40px;
+        font-size: 16px;
 
     }
     
-    .btnpc a{
-        font-size: 16px;
-    }
     #contact h1{
         font-size: 24px;
     }
