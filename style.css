@@ -722,7 +722,6 @@ footer{
     /* background-color: #7D67A9; */
     align-items: center;
     height: 60px;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.438);
 }
 
 .footerinfo div a{
@@ -738,17 +737,23 @@ footer{
     font-size: 20px;
     height: 60px;
     border-bottom: solid 1px rgba(255, 255, 255, 0.459);
+    border-top: solid 1px rgba(255, 255, 255, 0.459);
     width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #signature{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     color: white;
     font-size: 20px;
     /* background-color: #7D67A9; */
+    height: 60px;
 }
 
                             /* **** Works **** */
@@ -1211,6 +1216,9 @@ footer{
     .titre{
         position: relative;
     }
+    .contentcontact{
+        width: 90%;
+    }
    
 
 }
@@ -1254,9 +1262,6 @@ footer{
         width: 560px;
         height: 350px;
     }
-    .contentcontact{
-        width: 90%;
-    }
     
     .social{
         width: 150px;
@@ -1271,9 +1276,7 @@ footer{
         width: 500px;
         height: 150px;
     }  
-    .contentcontact{
-        width: 80%;
-    }
+
     .contentshow2{
         height: 50%;
     } 
@@ -1460,6 +1463,10 @@ footer{
     }
     
     .footerinfo div a{
+        font-size: 16px;
+    }
+
+    #mentions{
         font-size: 16px;
     }
     
