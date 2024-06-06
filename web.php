@@ -20,7 +20,7 @@
                 <a class="btnback" href="index.php#works">Back</a>
             </div>
             <div class="titre">
-                <h1>Animation</h1>
+                <h1>Web</h1>
                 <hr>
             </div>
         </div>
@@ -49,9 +49,10 @@
             ?>
             </div>
         </div>
+    </div>
         <?php
-    include("headfoot/footer.php");
-?>
+        include("headfoot/footer2.php");
+        ?>
 
 <script>
 

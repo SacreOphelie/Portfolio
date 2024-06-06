@@ -63,9 +63,10 @@
             ?>
             </div>
         </div>
+    </div>
         <?php
-    include("headfoot/footer.php");
-?>
+        include("headfoot/footer2.php");
+        ?>
 <script>
 
     const menuburger = document.querySelector('#menuburger')

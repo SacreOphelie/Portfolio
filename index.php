@@ -126,7 +126,7 @@
                 <div class="support"></div>
                 <div class="pied"></div>
                 <div class="btnpc2">
-                    <a href="picture.php" class="btnpc">Pictures</a>
+                    <a href="pictures.php" class="btnpc">Pictures</a>
                 </div>
             </div>         
         </div>
