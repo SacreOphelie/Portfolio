@@ -63,8 +63,8 @@
                             $gal->closeCursor();
                     ?>
                        </div>
-                        <div class='swiper-button-next'></div>
-                        <div class='swiper-button-prev'></div>
+                        <div class='swiper-button-next' id='swiper-button'></div>
+                        <div class='swiper-button-prev' id='swiper-button'></div>
                     </div>
                 </div>
             </div>

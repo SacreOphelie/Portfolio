@@ -8,10 +8,10 @@
         </div>
         <div class="footerinfo">
             <div class="footera">
-                <a href="#aboutme">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#works">Works</a>
-                <a href="#contact">Contact</a>
+                <a href="index.php#aboutme">About me</a>
+                <a href="index.php#skills">Skills</a>
+                <a href="index.php#works">Works</a>
+                <a href="index.php#contact">Contact</a>
             </div>
             <a href="mentions.php" id="mentions">Mentions Légales</a>
            

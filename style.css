@@ -131,6 +131,7 @@ nav{
     position: fixed;
     align-items: center;
     z-index: 200;
+    transition: all 1s;
 }
 
 nav ul{
@@ -146,6 +147,9 @@ nav ul li{
     justify-content: space-around;
     width: 200px;
     align-items: center;
+    transition: all 1s;
+    height: 50px;
+    border-radius: 25px;
 }
 
 nav ul li a{
@@ -154,12 +158,26 @@ nav ul li a{
     font-size: 25px;
     font-weight: 400;
     font-style: normal;
+    transition: all 1s;
+}
+
+nav ul li:hover{
+    a{
+        font-size: 30px;
+        color: #443471;
+    }
+    background-color: rgb(255, 255, 255);
 }
 
 nav ul li:last-child{
     background-color: white;
-    height: 50px;
-    border-radius: 25px;
+}
+
+nav ul li:last-child:hover{
+    #acontact{
+        color: white;
+    }
+    background-color: #443471;
 }
 
 #acontact{
@@ -904,12 +922,12 @@ footer{
 }
 
 .contentshow3{
-    width: 50%;
+    width: 45%;
     height: 90%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 50px;
     transition: all 1s;
     /* background-color: #DFCDDC; */
@@ -976,6 +994,10 @@ footer{
     margin-left: 0;
 }
 
+#swiper-button{
+    color: white;
+}
+
                             /* **** Error **** */
 
 .error403{
@@ -1028,17 +1050,7 @@ footer{
     .contentcontact{
         width: 50%;
     }
-    .contentshow{
-        width: 90%;
-        margin-top: 100px;
-    }
-    .contentshow2{
-        width: 50%;
-    }
        
-    .contentshow3{
-        width: 45%;
-    }
 }  
 
 @media all and (max-width: 1990px)
@@ -1172,12 +1184,12 @@ footer{
     }
     .contentshow{
         width: 80%;
-        height: 100%;
+        min-height: 200vh;
         flex-direction: column;
     }
     .contentshow2{
         width: 100%;
-        height: 100%;
+        min-height: 80vh;
     }
     
     .contentshowimg{
@@ -1188,7 +1200,8 @@ footer{
     
     .contentshow3{
         width: 100%;
-        height: 100%;
+        min-height: 50vh;
+        margin-top: 10px;
     }
     .video{
         height: 70%;
@@ -1485,13 +1498,20 @@ footer{
         height: 30%;
         font-size: 16px;
     }
+
     .contentshow{
-        height: 1450px;
+        min-height: 150vh;
+    }
+    .contentshow2{
+        min-height: 50vh;
+    }
+    .contentshow3{
+        min-height: 50vh;
+    }
+    .video{
+        height: 50%;
     }
 
-    .contentshow2{
-        height: 45%;
-    }
     .contentshow2 h1{
         font-size: 30px;
     }
@@ -1544,15 +1564,6 @@ footer{
         margin-left: 0;
         align-self: center; 
     }
-    .contentshow{
-        height: 1300px;
-    }
-    .contentshow2{
-        height: 40%;
-    }
-    .video{
-        height: 60%;
-    }
 
     .footerinfo{
         width: 80%;
@@ -1595,7 +1606,13 @@ footer{
         height: 230px;
     }
     .contentshow{
-        height: 1200px;
+        min-height: 150vh;
+    }
+    .contentshow2{
+        min-height: 40vh;
+    }
+    .contentshow3{
+        min-height: 40vh;
     }
 
 }
@@ -1752,16 +1769,16 @@ footer{
         width: 260px;
         height: 170px;
     }
-
     .contentshow{
-        height: 1000px;
+        min-height: 120vh;
     }
     .contentshow2{
-        height: 35%;
+        min-height: 30vh;
     }
     .contentshow3{
-        height: 60%;
+        min-height: 40vh;
     }
+
 }
 
 
