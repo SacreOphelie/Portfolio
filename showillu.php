@@ -27,6 +27,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>ShowIllu</title>
 </head>
 <body>
@@ -38,16 +39,7 @@
             <div class="contentshow2">
                 <h1><?= $don['nom'] ?></h1>
                 <div class="contentshowimg">
-                    <img src="images/<?= $don['image'] ?>" alt="image de <?= $don['nom'] ?>">
-                </div>
-            </div>
-            <div class="contentshow3">
-                <div class="date">Date : <div><?= $don['date'] ?></div></div>
-                <div class="description">Description : <div><?= nl2br($don['description']) ?></div></div>
-                <div class="galerie">
-                    Galerie :
-                    <div class="contentgalerie">
-                        <?php 
+                <?php 
                             $gal = $bdd->prepare("SELECT * FROM images WHERE id_illustration=?");
                             $gal->execute([$id]);
                             // tester si j'ai des images ou non
@@ -56,18 +48,31 @@
                             {
                                 while($donGal = $gal->fetch())
                                 {
-                                    echo "<div class='imagegal'>";  
-                                        echo "<img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."' class=''>";
+                                    echo "<div class='swiper mySwiper'>";
+                                        echo "<div class='swiper-wrapper'>";
+                                            echo " <div class='swiper-slide'><img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."'>";
+                                            echo "</div>";
+                                            echo " <div class='swiper-slide'><img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."'>";
+                                            echo "</div>";
+                                        echo "</div>";
+                                        echo "<div class='swiper-button-next'>";
+                                        echo "</div>";
+                                        echo "<div class='swiper-button-prev'>";
+                                        echo "</div>";
                                     echo "</div>";
+                                // echo "<img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."' class='>";
                                 }
                             }else{
                                 echo "<p>Aucune images associées</p>";
                             }
                             $gal->closeCursor();
-
-                        ?>
-                    </div>
+                    ?>
                 </div>
+            </div>
+            <div class="contentshow3">
+                <div class="date">Date : <div><?= $don['date'] ?></div></div>
+                <div class="description">Description : <div><?= nl2br($don['description']) ?></div></div>
+
                 <div class="btnback2">
                     <a href='illustration.php?categorie=<?= $don['categorie'] ?>' class="btnback">Back</a>
                 </div>
@@ -75,13 +80,22 @@
         </div>
     </div>
 
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 <script>
 
     const menuburger = document.querySelector('#menuburger')
     const menutab = document.querySelector('#menutab')
-
-
     menuburger.addEventListener('click',()=>{
         menuburger.classList.toggle('active-menu')
         menutab.classList.toggle('open')

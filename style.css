@@ -860,10 +860,41 @@ footer{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #33286800;
+    background-color: #2b00ff;
     border-top: solid 1px white;
     border-bottom: solid 1px white;
     margin-bottom: 50px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.imagegal{
+    width: 90%;
+    height: 90%;
+    background-color: #443471;
+    object-fit: cover;
+}
+
+.imagegal img{
+    width: 100%;
 }
 
 .contentshow2 img{
@@ -936,24 +967,6 @@ footer{
     margin-top: 20px;
     height: 100%;
     width: 90%;
-}
-
-.galerie{
-    width: 100%;
-    height: 500px;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.contentgalerie{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin-top: 20px;
-}
-
-.imagegal img{
-    width: 100px;
 }
 .contentshow3 .btnback2{
     margin-left: 0;
