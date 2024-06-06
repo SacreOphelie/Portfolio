@@ -39,6 +39,10 @@
             <div class="contentshow2">
                 <h1><?= $don['nom'] ?></h1>
                 <div class="contentshowimg">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
+                     
                 <?php 
                             $gal = $bdd->prepare("SELECT * FROM images WHERE id_illustration=?");
                             $gal->execute([$id]);
@@ -48,17 +52,8 @@
                             {
                                 while($donGal = $gal->fetch())
                                 {
-                                    echo "<div class='swiper mySwiper'>";
-                                        echo "<div class='swiper-wrapper'>";
-                                            echo " <div class='swiper-slide'><img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."'>";
-                                            echo "</div>";
-                                            echo " <div class='swiper-slide'><img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."'>";
-                                            echo "</div>";
-                                        echo "</div>";
-                                        echo "<div class='swiper-button-next'>";
-                                        echo "</div>";
-                                        echo "<div class='swiper-button-prev'>";
-                                        echo "</div>";
+                                   
+                                    echo " <div class='swiper-slide'><img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."'>";
                                     echo "</div>";
                                 // echo "<img src='images/".$donGal['fichier']."' alt='image de galerie ".$don['nom']."' class='>";
                                 }
@@ -67,6 +62,10 @@
                             }
                             $gal->closeCursor();
                     ?>
+                       </div>
+                        <div class='swiper-button-next'></div>
+                        <div class='swiper-button-prev'></div>
+                    </div>
                 </div>
             </div>
             <div class="contentshow3">
