@@ -30,12 +30,21 @@
 
         const menuburger = document.querySelector('#menuburger')
         const menutab = document.querySelector('#menutab')
+        const links = document.querySelectorAll("#menutab a")
+        console.log(links)
 
 
         menuburger.addEventListener('click',()=>{
             menuburger.classList.toggle('active-menu')
             menutab.classList.toggle('open')
         })
+        links.forEach((iteration)=>{
+            iteration.addEventListener('click',()=>{
+                menuburger.classList.remove('active-menu')
+                menutab.classList.remove('open')
+            })
+        })
+
 
 
 
