@@ -39,6 +39,7 @@ html,body{
     font-family: "Rajdhani", sans-serif;
     scroll-behavior: smooth;
     width: 100%;
+    background-color: #564294;
    
 }
 
@@ -1023,7 +1024,43 @@ footer{
 
 .error404 .btn{
     background-color: #7D67A9;
-}                            
+}
+
+                                /* ***** Mentions ***** */
+
+.mentions{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background-color: #ffd2f7; */
+    width: 70%;
+    margin: 100px auto;
+}
+.mentions h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+    align-self: center;
+}
+.mentions hr{
+    align-self: center;
+}
+
+.mentions h2{
+    margin-bottom: 20px;
+}
+.mentions p{
+    margin-bottom: 25px;
+}
+.mentions a{
+    color: white;
+}
+.mentions ul{
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
 
 
 
@@ -1302,6 +1339,12 @@ footer{
     .contentshow2{
         height: 50%;
     } 
+    .mentions hr{
+        margin-top: 10px;
+    }
+    .mentions p{
+        font-size: 14px;
+    }
 }
 
 @media all and (max-width: 1000px)
@@ -1540,6 +1583,9 @@ footer{
         font-size: 14px;
     }
 
+    .mentions h1{
+        font-size: 30px;
+    }
 }
 
 @media all and (max-width: 630px)
@@ -1567,6 +1613,16 @@ footer{
 
     .footerinfo{
         width: 80%;
+    }
+    .mentions hr{
+        margin-top: 0;
+        width: 80%;
+    }
+    .mentions h2{
+        margin-top: 20px;
+    }
+    .mentions p{
+        margin-bottom: 10px;
     }
 }
 
@@ -1777,6 +1833,9 @@ footer{
     }
     .contentshow3{
         min-height: 40vh;
+    }
+    .mentions h1{
+        font-size: 24px;
     }
 
 }
