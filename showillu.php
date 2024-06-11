@@ -35,7 +35,7 @@
     include("headfoot/header.php");
 ?>
     <div class="slide slideshow">
-        <div class="contentshow">
+        <div class="contentshow" id="contentshowillu">
             <div class="contentshow2">
                 <h1><?= $don['nom'] ?></h1>
                 <div class="contentshowimg">
@@ -68,9 +68,11 @@
                     </div>
                 </div>
             </div>
-            <div class="contentshow3">
-                <div class="date">Date : <div><?= $don['date'] ?></div></div>
-                <div class="description">Description : <div><?= nl2br($don['description']) ?></div></div>
+            <div class="contentshow3" id="contentillu">
+                <div id="contentdate">
+                    <div class="date" id="dateillu">Date : <div><?= $don['date'] ?></div></div>
+                    <div class="description" id="descriptionillu">Description : <div><?= nl2br($don['description']) ?></div></div>
+                </div>
 
                 <div class="btnback2">
                     <a href='illustration.php?categorie=<?= $don['categorie'] ?>' class="btnback">Back</a>

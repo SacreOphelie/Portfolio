@@ -855,6 +855,7 @@ footer{
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     transition: all 1s;
     /* background-color: #8678ff; */
     overflow: hidden;
@@ -886,6 +887,7 @@ footer{
     border-bottom: solid 1px white;
     margin-bottom: 100px;
     transition: all 1s;
+    /* background-color: #443471; */
 }
 .swiper {
     width: 90%;
@@ -924,14 +926,21 @@ footer{
 
 .contentshow3{
     width: 45%;
-    height: 90%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 50px;
     margin-bottom: 50px;
     transition: all 1s;
     /* background-color: #DFCDDC; */
+}
+
+#contentdate{
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .date{
@@ -940,6 +949,7 @@ footer{
     font-weight: 700;
     display: flex;
     align-items: center;
+    margin-top: 50px;
 }
 .date div{
     font-size: 16px;
@@ -993,6 +1003,7 @@ footer{
 }
 .contentshow3 .btnback2{
     margin-left: 0;
+    margin-bottom: 100px;
 }
 
 #swiper-button{
@@ -1201,6 +1212,10 @@ footer{
         height: 250px;
     }
 
+    .contentshow2 h1{
+        margin-top: 50px;
+    }
+
     .contentshowimg{
         height: 70%;
     }
@@ -1228,6 +1243,9 @@ footer{
         width: 100%;
         min-height: 80vh;
     }
+    .contentshow2 h1{
+        margin-top: 0px;
+    }
     
     .contentshowimg{
         width: 100%;
@@ -1246,7 +1264,14 @@ footer{
     .video iframe{
         width: 100%;
     }
-    
+    .contentshow3 .btnback2{
+        margin-bottom: 0;
+    }
+
+    #contentshowillu{
+        min-height: 150vh;
+    }
+
 }
 @media all and (max-width: 1200px)
 {
@@ -1586,6 +1611,9 @@ footer{
     .mentions h1{
         font-size: 30px;
     }
+    #contentshowillu{
+        min-height: 120vh;
+    }
 }
 
 @media all and (max-width: 630px)
@@ -1669,6 +1697,9 @@ footer{
     }
     .contentshow3{
         min-height: 40vh;
+    }
+    #contentshowillu{
+        min-height: 100vh;
     }
 
 }
@@ -1836,6 +1867,12 @@ footer{
     }
     .mentions h1{
         font-size: 24px;
+    }
+    #contentshowillu{
+        min-height: 90vh;
+    }
+    #contentillu{
+        height: 50%;
     }
 
 }
