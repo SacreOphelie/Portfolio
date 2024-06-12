@@ -23,6 +23,7 @@
                         <li><a class="dropdown-item" href="illustration.php">Illustrations</a></li>
                         <li><a class="dropdown-item" href="web.php">Web</a></li>
                         <li><a class="dropdown-item" href="skills.php">Skills</a></li>
+                        <li><a class="dropdown-item" href="pictures.php">Pictures</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
