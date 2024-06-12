@@ -34,18 +34,20 @@
     include("headfoot/header.php");
 ?>
     <div class="slide slideshow">
-        <div class="contentshow">
+        <div class="contentshow" id="contentweb">
             <div class="contentshow2">
                 <h1><?= $don['nom'] ?></h1>
                 <div class="contentshowimg">
                     <img src="images/<?= $don['photo'] ?>" alt="image de <?= $don['nom'] ?>">
                 </div>
             </div>
-            <div class="contentshow3">
-                <div class="date">Date : <div><?= $don['date'] ?></div></div>
-                <div class="description">Description : <div><?= nl2br($don['description']) ?></div></div>
-                <div class="url">Lien du site : <div><a href="<?= nl2br($don['url']) ?>"><?= nl2br($don['url']) ?></a></div></div>
-                <div class="url">Lien Figma : <div><a href="<?= nl2br($don['figma']) ?>"><?= nl2br($don['figma']) ?></a></div></div>
+            <div class="contentshow3" id="contentshowweb">
+                <div id="contentdateweb">
+                    <div class="date">Date : <div><?= $don['date'] ?></div></div>
+                    <div class="description">Description : <div><?= nl2br($don['description']) ?></div></div>
+                    <div class="url">Lien du site : <div><a href="<?= nl2br($don['url']) ?>"><?= nl2br($don['url']) ?></a></div></div>
+                    <div class="url">Lien Figma : <div><a href="<?= nl2br($don['figma']) ?>"><?= nl2br($don['figma']) ?></a></div></div>
+                </div>
                 <div class="btnback2">
                     <a href="web.php" class="btnback">Back</a>
                 </div>
