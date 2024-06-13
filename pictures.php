@@ -16,19 +16,19 @@
     ?>
     <div class="contentpicture">
         <h1>Pictures</h1>
-    <div class="contentgalerie">
-    <?php
-                $req = $bdd->query("SELECT * FROM pictures ORDER BY id ASC");
-                while($don = $req->fetch())
-                {
-                    echo "<div>";
-                        echo "<img src='images/".$don['picture']."' class='img-fluid' />";
-                       
-                    echo "</div>";
-                }
-                $req->closeCursor();
-            ?>
-    </div>
+        <div class="contentgalerie">
+        <?php
+                    $req = $bdd->query("SELECT * FROM pictures ORDER BY id ASC");
+                    while($don = $req->fetch())
+                    {
+                        echo "<div>";
+                            echo "<img src='images/".$don['picture']."' class='img-fluid' />";
+                        
+                        echo "</div>";
+                    }
+                    $req->closeCursor();
+                ?>
+        </div>
     </div>
     <?php
         include("headfoot/footer2.php");
